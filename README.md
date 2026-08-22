@@ -8,7 +8,8 @@
 
 > A modern, 100% offline, privacy-first 7-minute interval workout web application inspired by scientific high-intensity circuit training (HICT). Features real-time biomechanical mannequin animations, synthesized coach personalities, a gamified 3-hearts streak system, custom workout builder, and full data export/import capabilities.
 
----
+
+## 🌐 **[https://vapoafe.github.io/SevenFit](https://vapoafe.github.io/SevenFit)**
 
 
 ## 🚀 Key Features

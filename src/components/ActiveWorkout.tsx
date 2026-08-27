@@ -559,7 +559,7 @@ export const ActiveWorkout: React.FC<ActiveWorkoutProps> = ({
 
             <div className="app-card border app-border rounded-xl p-3 shadow-sm">
               <div className="text-xs app-text-sub">Calories Burned</div>
-              <div className="text-xl font-bold font-mono text-rose-500 mt-0.5">
+              <div className="text-xl font-bold font-mono text-rose-700 dark:text-rose-400 mt-0.5">
                 {Math.round(totalCalories)} kcal
               </div>
             </div>

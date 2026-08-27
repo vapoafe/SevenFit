@@ -58,7 +58,7 @@ export const StatsAndBadges: React.FC<StatsAndBadgesProps> = ({
       <div className="app-card border border-rose-500/30 rounded-3xl p-5 shadow-xl relative overflow-hidden">
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-[10px] font-black uppercase tracking-wider text-rose-500 dark:text-rose-400">
+            <div className="text-[10px] font-black uppercase tracking-wider text-rose-700 dark:text-rose-400">
               Seven Life Protection
             </div>
             <h2 className="text-xl font-black app-text mt-0.5">

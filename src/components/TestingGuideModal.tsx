@@ -114,7 +114,7 @@ jobs:
                 onClick={() => setActiveTab(t.id as any)}
                 className={`flex items-center gap-2 px-3.5 py-2.5 text-xs font-bold border-b-2 whitespace-nowrap transition-all ${
                   isActive
-                    ? 'border-rose-500 text-rose-500 font-extrabold'
+                    ? 'border-rose-600 dark:border-rose-400 text-rose-700 dark:text-rose-400 font-black'
                     : 'border-transparent app-text-sub hover:app-text'
                 }`}
               >

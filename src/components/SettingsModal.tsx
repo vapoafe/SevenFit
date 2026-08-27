@@ -139,7 +139,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   onClick={() => handleThemeChange(th.id as any)}
                   className={`p-3 rounded-xl border flex flex-col items-center gap-1.5 text-xs font-bold transition-all ${
                     userState.theme === th.id
-                      ? 'bg-rose-500/20 border-rose-500 text-rose-600 dark:text-rose-300 shadow-sm'
+                      ? 'bg-rose-500/20 border-rose-500 text-rose-700 dark:text-rose-200 shadow-sm'
                       : 'app-card-subtle app-border app-text-sub hover:app-text hover:app-card-hover'
                   }`}
                 >

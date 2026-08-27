@@ -2,6 +2,29 @@
 
 @layer base {
   :root,
+  .theme-light,
+  [data-theme="light"] {
+    --bg-app: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f1f5f9;
+    --bg-card-hover: #e2e8f0;
+    --border-main: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text-main: #0f172a;
+    --text-sub: #475569;
+    --text-muted: #64748b;
+    --header-bg: rgba(248, 250, 252, 0.94);
+    --nav-bg: rgba(255, 255, 255, 0.96);
+    --modal-bg: #ffffff;
+    --modal-backdrop: rgba(15, 23, 42, 0.6);
+    --canvas-bg: #f1f5f9;
+    --canvas-floor: rgba(100, 116, 139, 0.35);
+    --canvas-mannequin: #334155;
+    --canvas-joint: #0284c7;
+    --color-scheme: light;
+    --text-rose-contrast: #be123c;
+  }
+
   .theme-dark,
   [data-theme="dark"] {
     --bg-app: #090d16;
@@ -22,6 +45,7 @@
     --canvas-mannequin: #cbd5e1;
     --canvas-joint: #0284c7;
     --color-scheme: dark;
+    --text-rose-contrast: #fb7185;
   }
 
   .theme-oled,
@@ -44,28 +68,7 @@
     --canvas-mannequin: #e4e4e7;
     --canvas-joint: #06b6d4;
     --color-scheme: dark;
-  }
-
-  .theme-light,
-  [data-theme="light"] {
-    --bg-app: #f8fafc;
-    --bg-card: #ffffff;
-    --bg-card-subtle: #f1f5f9;
-    --bg-card-hover: #e2e8f0;
-    --border-main: #e2e8f0;
-    --border-strong: #cbd5e1;
-    --text-main: #0f172a;
-    --text-sub: #475569;
-    --text-muted: #64748b;
-    --header-bg: rgba(248, 250, 252, 0.94);
-    --nav-bg: rgba(255, 255, 255, 0.96);
-    --modal-bg: #ffffff;
-    --modal-backdrop: rgba(15, 23, 42, 0.6);
-    --canvas-bg: #f1f5f9;
-    --canvas-floor: rgba(100, 116, 139, 0.35);
-    --canvas-mannequin: #334155;
-    --canvas-joint: #0284c7;
-    --color-scheme: light;
+    --text-rose-contrast: #fda4af;
   }
 
   body {
@@ -113,6 +116,10 @@
 
 .app-text-muted {
   color: var(--text-muted);
+}
+
+.app-text-rose {
+  color: var(--text-rose-contrast);
 }
 
 .app-header {

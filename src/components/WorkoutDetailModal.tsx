@@ -70,7 +70,7 @@ export const WorkoutDetailModal: React.FC<WorkoutDetailModalProps> = ({
         <div className="p-4 sm:p-6 border-b app-border flex items-start justify-between relative app-card-subtle">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-300 border border-rose-500/40">
+              <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-500/40">
                 {routine.category.replace('_', ' ')}
               </span>
               <span className="text-[11px] font-bold app-text-sub capitalize">
@@ -113,7 +113,7 @@ export const WorkoutDetailModal: React.FC<WorkoutDetailModalProps> = ({
 
             <div className="app-card-subtle border app-border rounded-xl p-2.5">
               <div className="text-[11px] font-semibold app-text-sub flex items-center justify-center gap-1">
-                <Flame size={12} className="text-rose-500" /> Calories
+                <Flame size={12} className="text-rose-700 dark:text-rose-400" /> Calories
               </div>
               <div className="text-base font-bold font-mono app-text mt-0.5">
                 ~{Math.round(totalExercises * 6)} kcal
@@ -130,7 +130,7 @@ export const WorkoutDetailModal: React.FC<WorkoutDetailModalProps> = ({
               {targetedMuscles.map((muscle) => (
                 <span
                   key={muscle}
-                  className="text-xs font-semibold px-2.5 py-1 rounded-lg app-card-subtle text-rose-500 dark:text-rose-300 border app-border uppercase shadow-sm"
+                  className="text-xs font-semibold px-2.5 py-1 rounded-lg app-card-subtle text-rose-700 dark:text-rose-300 border app-border uppercase shadow-sm"
                 >
                   {muscle}
                 </span>
@@ -144,7 +144,7 @@ export const WorkoutDetailModal: React.FC<WorkoutDetailModalProps> = ({
               <span className="text-xs font-bold uppercase app-text-sub">
                 Choose Voice Coach:
               </span>
-              <span className="text-xs text-rose-500 font-semibold">
+              <span className="text-xs text-rose-700 dark:text-rose-400 font-bold">
                 {COACHES[selectedCoachId]?.name}
               </span>
             </div>

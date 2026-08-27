@@ -84,7 +84,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
         <button
           type="button"
           onClick={() => setIsCustomizing(!isCustomizing)}
-          className="px-3 py-1.5 rounded-xl app-card-subtle hover:app-card-hover text-xs font-bold text-rose-500 dark:text-rose-400 border app-border transition-colors flex items-center gap-1.5 shadow-sm"
+          className="px-3 py-1.5 rounded-xl app-card-subtle hover:app-card-hover text-xs font-bold text-rose-700 dark:text-rose-300 border app-border transition-colors flex items-center gap-1.5 shadow-sm"
         >
           <RefreshCw size={13} />
           {isCustomizing ? 'Close Wizard' : 'Change Goal'}
@@ -95,7 +95,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
       {isCustomizing && (
         <div className="app-card border border-rose-500/30 rounded-3xl p-5 space-y-4 shadow-xl animate-fadeIn">
           <div className="flex items-center gap-2 text-sm font-black app-text">
-            <Sparkles size={18} className="text-rose-500" />
+            <Sparkles size={18} className="text-rose-700 dark:text-rose-400" />
             Customize Your Fitness Blueprint
           </div>
 
@@ -118,7 +118,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
                   onClick={() => setSelectedGoal(g.id as any)}
                   className={`p-2.5 rounded-xl border text-left flex items-center gap-2 transition-all ${
                     selectedGoal === g.id
-                      ? 'bg-rose-500/20 border-rose-500 app-text font-bold'
+                      ? 'bg-rose-500/20 border-rose-500 text-rose-700 dark:text-rose-200 font-bold'
                       : 'app-card-subtle app-border app-text-sub hover:app-text hover:app-card-hover'
                   }`}
                 >
@@ -142,7 +142,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
                   onClick={() => setSelectedLevel(lvl as any)}
                   className={`py-2 px-3 rounded-xl border text-xs font-bold capitalize transition-all ${
                     selectedLevel === lvl
-                      ? 'bg-sky-500/20 border-sky-400 text-sky-600 dark:text-sky-300 font-bold'
+                      ? 'bg-sky-500/20 border-sky-400 text-sky-700 dark:text-sky-300 font-bold'
                       : 'app-card-subtle app-border app-text-sub hover:app-text hover:app-card-hover'
                   }`}
                 >
@@ -166,7 +166,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
               type="checkbox"
               checked={lowImpact}
               onChange={(e) => setLowImpact(e.target.checked)}
-              className="w-4 h-4 accent-rose-500 rounded cursor-pointer"
+              className="w-4 h-4 accent-rose-600 rounded cursor-pointer"
             />
           </div>
 
@@ -185,7 +185,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
         <div className="flex items-start justify-between">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-500 dark:text-rose-300 border border-rose-500/40">
+              <span className="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-500/40">
                 Week {activeWeek} of 4
               </span>
               <span className="text-[11px] font-bold app-text-sub capitalize">
@@ -206,7 +206,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
               onClick={() => setActiveWeek(wk)}
               className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                 activeWeek === wk
-                  ? 'bg-rose-500 text-white shadow-md shadow-rose-500/20'
+                  ? 'bg-rose-600 dark:bg-rose-500 text-white shadow-md shadow-rose-600/20'
                   : 'app-card-subtle app-text-sub hover:app-text hover:app-card-hover'
               }`}
             >
@@ -225,7 +225,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
         return (
           <div className="bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 flex items-center justify-between shadow-lg">
             <div className="space-y-0.5">
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-rose-500 dark:text-rose-400">
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-rose-700 dark:text-rose-400">
                 Today's Assignment ({todaySchedule.dayName})
               </span>
               <div className="text-base font-black app-text">
@@ -253,7 +253,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
       {/* Weekly Schedule Days */}
       <div className="space-y-2.5">
         <div className="text-xs font-bold uppercase app-text-sub flex items-center gap-1.5">
-          <Calendar size={14} className="text-sky-500" /> Week {activeWeek} Schedule:
+          <Calendar size={14} className="text-sky-600 dark:text-sky-400" /> Week {activeWeek} Schedule:
         </div>
 
         {currentWeekDays.map((day) => {
@@ -275,8 +275,8 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
                     day.isRest
                       ? 'app-card app-text-sub'
                       : isToday
-                      ? 'bg-rose-500 text-white shadow-md shadow-rose-500/30'
-                      : 'app-card text-rose-500 dark:text-rose-300'
+                      ? 'bg-rose-600 dark:bg-rose-500 text-white shadow-md shadow-rose-600/30'
+                      : 'app-card text-rose-700 dark:text-rose-300'
                   }`}
                 >
                   {day.dayName.substring(0, 3)}
@@ -288,7 +288,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
                       {day.isRest ? 'Rest & Recharge' : workout?.title || day.focus}
                     </span>
                     {isToday && (
-                      <span className="text-[9px] font-black uppercase bg-rose-500 text-white px-1.5 py-0.2 rounded">
+                      <span className="text-[9px] font-black uppercase bg-rose-600 dark:bg-rose-500 text-white px-1.5 py-0.2 rounded">
                         Today
                       </span>
                     )}
@@ -303,7 +303,7 @@ export const WorkoutPlans: React.FC<WorkoutPlansProps> = ({
                 <button
                   type="button"
                   onClick={() => handleStartPlanDay(day.workoutId)}
-                  className="p-2 rounded-xl app-card hover:app-card-hover text-rose-500 dark:text-rose-400 hover:app-text transition-colors border app-border"
+                  className="p-2 rounded-xl app-card hover:app-card-hover text-rose-700 dark:text-rose-400 hover:app-text transition-colors border app-border"
                   title="View / Start Workout"
                 >
                   <ChevronRight size={18} />

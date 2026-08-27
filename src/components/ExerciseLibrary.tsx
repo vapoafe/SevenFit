@@ -105,7 +105,7 @@ export const ExerciseLibrary: React.FC = () => {
             onClick={() => setSelectedCategory(c.value)}
             className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
               selectedCategory === c.value
-                ? 'bg-rose-500 text-white shadow-md shadow-rose-500/20'
+                ? 'bg-rose-600 dark:bg-rose-500 text-white shadow-md shadow-rose-600/20'
                 : 'app-card app-text-sub border app-border hover:app-text hover:app-card-hover'
             }`}
           >
@@ -123,7 +123,7 @@ export const ExerciseLibrary: React.FC = () => {
             onClick={() => setSelectedMuscle(m.value)}
             className={`px-2.5 py-1 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-all ${
               selectedMuscle === m.value
-                ? 'bg-sky-500/20 text-sky-600 dark:text-sky-300 border border-sky-500/50'
+                ? 'bg-sky-500/20 text-sky-700 dark:text-sky-300 border border-sky-500/50'
                 : 'app-card-subtle app-text-sub border app-border hover:app-text hover:app-card-hover'
             }`}
           >
@@ -144,16 +144,16 @@ export const ExerciseLibrary: React.FC = () => {
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-1.5 mb-1 flex-wrap">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded app-card-subtle text-rose-500 dark:text-rose-300 border app-border">
+                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded app-card-subtle text-rose-700 dark:text-rose-300 border app-border">
                       {ex.category.replace('_', ' ')}
                     </span>
                     {ex.isLowImpact && (
-                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-300 border border-emerald-500/30">
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
                         Joint Safe
                       </span>
                     )}
                   </div>
-                  <h3 className="text-base font-black app-text group-hover:text-rose-500 transition-colors">
+                  <h3 className="text-base font-black app-text group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors">
                     {ex.name}
                   </h3>
                 </div>
@@ -190,7 +190,7 @@ export const ExerciseLibrary: React.FC = () => {
             {/* Header */}
             <div className="p-4 sm:p-5 border-b app-border flex items-center justify-between">
               <div>
-                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-rose-500/20 text-rose-500 dark:text-rose-300 border border-rose-500/40">
+                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-500/40">
                   {selectedExercise.category.replace('_', ' ')}
                 </span>
                 <h2 className="text-xl font-black app-text mt-1">
@@ -225,7 +225,7 @@ export const ExerciseLibrary: React.FC = () => {
                   {selectedExercise.targetMuscles.map((m) => (
                     <span
                       key={m}
-                      className="text-xs font-bold uppercase px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-500 dark:text-rose-300 border border-rose-500/40"
+                      className="text-xs font-bold uppercase px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-500/40"
                     >
                       {m}
                     </span>
@@ -255,7 +255,7 @@ export const ExerciseLibrary: React.FC = () => {
 
               {/* Form Tips */}
               <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-3">
-                <div className="flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-300 uppercase mb-1.5">
+                <div className="flex items-center gap-1 text-xs font-bold text-emerald-700 dark:text-emerald-300 uppercase mb-1.5">
                   <CheckCircle size={14} /> Proper Form Tips:
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-xs app-text">
@@ -267,7 +267,7 @@ export const ExerciseLibrary: React.FC = () => {
 
               {/* Common Mistakes */}
               <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-3">
-                <div className="flex items-center gap-1 text-xs font-bold text-amber-600 dark:text-amber-300 uppercase mb-1.5">
+                <div className="flex items-center gap-1 text-xs font-bold text-amber-700 dark:text-amber-300 uppercase mb-1.5">
                   <AlertTriangle size={14} /> Common Mistakes to Avoid:
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-xs app-text">
@@ -288,7 +288,7 @@ export const ExerciseLibrary: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => playVoiceCue(selectedExercise.coachCues.start)}
-                  className="p-2.5 rounded-xl bg-rose-500/20 text-rose-500 dark:text-rose-300 hover:bg-rose-500 hover:text-white transition-all shrink-0 border border-rose-500/40"
+                  className="p-2.5 rounded-xl bg-rose-500/20 text-rose-700 dark:text-rose-300 hover:bg-rose-600 hover:text-white transition-all shrink-0 border border-rose-500/40"
                   title="Listen to coach cue"
                 >
                   <Volume2 size={18} />

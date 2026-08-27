@@ -235,7 +235,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setShowSettings(true)}
-                className="text-xs font-bold text-rose-500 dark:text-rose-400 hover:opacity-80 bg-rose-500/10 px-3 py-1.5 rounded-xl border border-rose-500/20 transition-colors"
+                className="text-xs font-bold text-rose-700 dark:text-rose-300 hover:opacity-80 bg-rose-500/10 px-3 py-1.5 rounded-xl border border-rose-500/30 transition-colors"
               >
                 Change Coach
               </button>
@@ -258,7 +258,7 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-rose-500/15 text-rose-600 dark:text-rose-300 border border-rose-500/30">
+                          <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30">
                             {routine.category.replace('_', ' ')}
                           </span>
                           <span className="text-xs font-mono app-text-sub font-semibold">
@@ -266,7 +266,7 @@ export default function App() {
                           </span>
                         </div>
 
-                        <h3 className="text-base font-bold app-text group-hover:text-rose-500 transition-colors">
+                        <h3 className="text-base font-bold app-text group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors">
                           {routine.title}
                         </h3>
                         <p className="text-xs app-text-sub mt-1 line-clamp-2">
@@ -278,7 +278,7 @@ export default function App() {
                         <span className="text-xs app-text-sub font-medium">
                           {routine.exercises.length} exercises
                         </span>
-                        <div className="flex items-center gap-1 text-xs font-bold text-rose-500 dark:text-rose-400 group-hover:translate-x-0.5 transition-transform">
+                        <div className="flex items-center gap-1 text-xs font-bold text-rose-700 dark:text-rose-400 group-hover:translate-x-0.5 transition-transform">
                           <span>View & Start</span>
                           <ChevronRight size={15} />
                         </div>
@@ -338,7 +338,7 @@ export default function App() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex flex-col items-center justify-center py-1 px-3 rounded-xl transition-all ${
                   isActive
-                    ? 'text-rose-500 font-bold scale-105'
+                    ? 'text-rose-700 dark:text-rose-400 font-bold scale-105'
                     : 'app-text-sub hover:app-text'
                 }`}
               >

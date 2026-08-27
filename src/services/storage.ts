@@ -28,7 +28,7 @@ const DEFAULT_USER_STATE: UserState = {
   selectedCoachId: 'drill',
   activePlanId: null,
   planWeek: 1,
-  theme: 'dark',
+  theme: 'light',
   voiceVolume: 0.9,
   sfxVolume: 0.8,
   speechEnabled: true,
